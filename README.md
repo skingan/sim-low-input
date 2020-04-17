@@ -1,5 +1,5 @@
 # sim-low-input
-A tool for simulating PacBio Low DNA Input HiFi Data. This tool requires standard HiFi data and simulates reads with the length distribution of low DNA input libraries.
+A tool for simulating PacBio Low DNA Input HiFi Data. This tool requires standard HiFi data and simulates reads with the length distribution of low DNA input libraries by truncating reads.
 
 ## Usage
 
@@ -18,7 +18,7 @@ optional arguments:
 ```
 
 ### Example
-Use provided example files to get 100 kb of data
+Use provided example files to get 100 kb of "low input" data
 
 `simulate_lowinput_readlengths.py std_hifi.fastq 0.0001 low-input.hist.csv`
 
@@ -27,10 +27,10 @@ python 3 libraries `os` `seqio` `argparse` `numpy`
 
 ## Input
 1. Standard PacBio HiFi library fastq
-2. Histogram of read lengths
-3. Total Gb of data desired
+2. Total Gb of data desired
+3. Histogram of read lengths
 
 ## Output
-Fasta of HiFi reads with desired read length distribution printed to stdout
+Fasta of HiFi reads with desired read length distribution printed to `STDOUT`
 
 
